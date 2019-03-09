@@ -9,5 +9,10 @@ public class JokesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jokes);
+
+        if (savedInstanceState == null)
+        {
+            getSupportFragmentManager().beginTransaction().add(R.id.jokesContainer,new JokesFragment()).commit();
+        }
     }
 }
