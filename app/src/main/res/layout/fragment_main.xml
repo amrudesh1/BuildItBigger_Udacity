@@ -23,6 +23,7 @@
         android:layout_centerInParent="true"
         android:layout_below="@+id/instructions_text_view"
         android:onClick="tellJoke"
+        android:id="@+id/button"
         android:text="@string/button_text" />
 
     <com.google.android.gms.ads.AdView
