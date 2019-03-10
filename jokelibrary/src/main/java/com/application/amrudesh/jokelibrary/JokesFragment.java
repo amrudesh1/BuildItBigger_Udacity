@@ -14,7 +14,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 
-public class JokesFragment extends Fragment {
+public class JokesFragment extends Fragment  {
 
 
 public JokesFragment() {

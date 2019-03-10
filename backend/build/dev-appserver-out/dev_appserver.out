@@ -1,6 +1,6 @@
 Warning: Google App Engine Java 7 runtime is deprecated.
 Warning: See https://cloud.google.com/appengine/docs/deprecations/java7
-Mar 09, 2019 8:56:53 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Mar 10, 2019 12:25:41 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\amrud\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'D:\Udacity\Term 2\Project\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
 
 ************************************************
