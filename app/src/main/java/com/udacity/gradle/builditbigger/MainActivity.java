@@ -1,23 +1,22 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
+import com.application.amrudesh.jokelibrary.JokesActivity;
 
 
-public class MainActivity extends AppCompatActivity {
-    private InterstitialAd mInterstitialAd;
+public class MainActivity extends AppCompatActivity  {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
     }
 
 
@@ -44,9 +43,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-       EndPointsAsyncTask endPointsAsyncTask = new EndPointsAsyncTask();
-       endPointsAsyncTask.execute(this);
+        EndPointsAsyncTask endPointsAsyncTask = new EndPointsAsyncTask( new AsyncResponse() {
+            @Override
+            public void processFinish(String output) {
+                Intent intent = new Intent(MainActivity.this, JokesActivity.class);
+                intent.putExtra("result", output);
+                startActivity(intent);
+            }
+        });
+        endPointsAsyncTask.execute(this);
     }
-
-
 }
+
+
+
+
